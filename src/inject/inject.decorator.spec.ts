@@ -33,8 +33,10 @@ describe("App Class Test", () => {
   })
 
   it("Should create an instance of App with injected properties", () => {
+    expect(appInstance).toBeInstanceOf(App);
     expect(appInstance.a).toBeInstanceOf(A);
     expect(appInstance.a.b).toBeInstanceOf(B);
     expect(appInstance.a.b.c).toBeInstanceOf(C);
+    expect(appInstance.a.b.c.registry).toBeInstanceOf(Registry);
   });
 });
