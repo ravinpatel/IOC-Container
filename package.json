@@ -4,6 +4,7 @@
   "description": "A simple Typescript inversion of control (IOC) container",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf dist && tsc",
     "test": "jest",
     "lint": "eslint . --ext .ts"
   },
