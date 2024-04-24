@@ -1,4 +1,5 @@
 export class Registry {
+  // should I remove the types here instead of using any
   static services: Map<string, any> = new Map<string, any>()
 
   static create<Type>(name: string, value: Type): void {

@@ -1,5 +1,5 @@
-export interface Constructor {
-  new (...args: any[]): {}
+export interface Constructor<T = NonNullable<unknown>> {
+  new (...args: any[]): T
 }
 
-export type Injection = { name: string; value: any } 
+export type Injection<T> = { name: string; value: T }
