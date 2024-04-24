@@ -6,11 +6,11 @@ interface Options {
 }
 
 export const inject = (options?: Options) => (target: any, propertyKey: string | symbol) => {
-  const registryName = Registry.name.toLocaleLowerCase();
+  const registryName = Registry.name.toLocaleLowerCase()
   if (!Registry.has(registryName)) {
-    Registry.create(registryName, new Registry());
+    Registry.create(registryName, new Registry())
   }
 
-  const get = () => Registry.retrieve(options?.name || propertyKey.toString());
-  Object.defineProperty(target, propertyKey, { get });
+  const get = () => Registry.retrieve(options?.name || propertyKey.toString())
+  Object.defineProperty(target, propertyKey, { get })
 };

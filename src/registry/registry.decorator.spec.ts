@@ -7,8 +7,8 @@ class MockService {}
 
 describe('Registry Decorator', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
-  });
+    jest.clearAllMocks()
+  })
 
   it('should register injections correctly', () => {
     const injections = [
@@ -20,28 +20,28 @@ describe('Registry Decorator', () => {
     @registry(injections)
     class TestClass {}
 
-    new TestClass();
+    new TestClass()
 
-    expect(Registry.create).toHaveBeenCalledWith('dependencya', 'valueA');
-    expect(Registry.create).toHaveBeenCalledWith('dependencyb', 'valueB');
-    expect(Registry.create).toHaveBeenCalledWith('mockservice', expect.any(MockService));
+    expect(Registry.create).toHaveBeenCalledWith('dependencya', 'valueA')
+    expect(Registry.create).toHaveBeenCalledWith('dependencyb', 'valueB')
+    expect(Registry.create).toHaveBeenCalledWith('mockservice', expect.any(MockService))
   });
 
   it('should handle undefined injections', () => {
     @registry()
     class TestClass {}
 
-    new TestClass();
+    new TestClass()
 
-    expect(Registry.create).not.toHaveBeenCalled();
+    expect(Registry.create).not.toHaveBeenCalled()
   });
 
   it('should handle empty injections array', () => {
     @registry([])
     class TestClass {}
 
-    new TestClass();
+    new TestClass()
 
-    expect(Registry.create).not.toHaveBeenCalled();
+    expect(Registry.create).not.toHaveBeenCalled()
   });
 });

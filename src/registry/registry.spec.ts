@@ -2,8 +2,8 @@ import { Registry } from "./registry"
 
 describe('Registry', () => {
   let registry: Registry
-  let createSpy: jest.SpyInstance;
-  let getSpy: jest.SpyInstance;
+  let createSpy: jest.SpyInstance
+  let getSpy: jest.SpyInstance
 
   beforeEach(() => {
     registry = new Registry()
