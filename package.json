@@ -1,5 +1,5 @@
 {
-  "name": "ioc-container",
+  "name": "ioc-container-simple",
   "version": "1.0.0",
   "description": "A simple Typescript inversion of control (IOC) container",
   "main": "index.js",
