@@ -74,7 +74,7 @@ npm run test
 ```
 
 ## Linting
-### To check eslint rules, use:
+### To check ESLint rules, use:
 ```
 npm run lint
 ```
