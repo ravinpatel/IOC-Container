@@ -1,5 +1,5 @@
 # IOC-Container
-A simple Typescript inversion of control (IOC) container. TypeScript based lightweight annotation-based dependency injection container. 
+A simple inversion of control (IOC) container. TypeScript based lightweight annotation-based dependency injection container. 
 
 ## How to install
 You can install this package using NPM:
