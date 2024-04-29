@@ -67,4 +67,14 @@ class MyClass {
 }
 ```
 
+## Testing
+### To run the tests, use
+```
+npm run test
+```
 
+## Linting
+### To check eslint rules, use:
+```
+npm run lint
+```
