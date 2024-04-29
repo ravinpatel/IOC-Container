@@ -1,0 +1,31 @@
+{
+  "name": "ioc-container-simple",
+  "version": "1.0.0",
+  "description": "A simple Typescript inversion of control (IOC) container",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "jest",
+    "lint": "eslint . --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravinpatel/IOC-Container.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravinpatel/IOC-Container/issues"
+  },
+  "homepage": "https://github.com/ravinpatel/IOC-Container#readme",
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
+  }
+}
