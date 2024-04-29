@@ -68,7 +68,7 @@ class MyClass {
 ```
 
 ## Testing
-### To run the tests, use
+### To run the tests, use:
 ```
 npm run test
 ```
