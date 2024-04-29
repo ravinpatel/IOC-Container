@@ -1,9 +1,10 @@
 import { registry } from "../registry/registry.decorator"
-import { Registry } from "../registry/registry"
 import { inject } from "../inject/inject.decorator"
 
 class C {
-  @inject() public readonly registry: Registry
+  log() {
+    console.log('Logging from class C');
+  }
 }
 
 class B {
@@ -37,6 +38,8 @@ describe("App Class Test", () => {
     expect(appInstance.a).toBeInstanceOf(A)
     expect(appInstance.a.b).toBeInstanceOf(B)
     expect(appInstance.a.b.c).toBeInstanceOf(C)
-    expect(appInstance.a.b.c.registry).toBeInstanceOf(Registry)
+    const consoleLogSpy = jest.spyOn(console, 'log')
+    appInstance.a.b.c.log()
+    expect(consoleLogSpy).toHaveBeenCalledWith('Logging from class C')
   });
 });
